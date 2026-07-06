@@ -218,6 +218,7 @@
   font-weight: 800;
   line-height: 1.2;
   box-shadow: 0 18px 42px rgba(31, 45, 42, 0.1);
+  /* width: max-content; */
 }
 
 .v2-ticket--peach { background: var(--color-peach); }
@@ -1535,6 +1536,7 @@
     position: static;
     display: inline-flex;
     margin: 10px 8px 0 0;
+    width: max-content;
   }
 
   .v2-hero__visual {
