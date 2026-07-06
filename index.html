@@ -490,70 +490,68 @@
             <p>This prototype reserves an honest reel area for approved videos only. Current cards are clearly marked as placeholders.</p>
           </div>
 
-          <div class="td-carousel reel-carousel-v2" data-carousel aria-label="Instagram reel placeholder carousel">
-            <div class="td-carousel__slides">
-              <article class="td-carousel__slide is-active" data-carousel-slide>
-                <div class="reel-deck">
-                  <div class="reel-card reel-card--side">
-                    <img src="./assets/images/icons/play-circle.svg" alt="" aria-hidden="true">
-                    <span>Client story embed placeholder</span>
-                  </div>
-                  <div class="reel-card reel-card--active">
-                    <img src="./assets/images/icons/play-circle.svg" alt="" aria-hidden="true">
+          <div class="splide td-splide reel-carousel-v2" data-splide-carousel="reels" data-aos="fade-up" aria-label="Instagram reel placeholder carousel">
+            <div class="splide__track">
+              <div class="splide__list">
+                <article class="splide__slide">
+                  <div class="reel-card">
+                    <span data-lucide="play-circle" aria-hidden="true"></span>
                     <span>Instagram reel slot</span>
                     <p>Approved Instagram embed can replace this card later.</p>
                   </div>
-                  <div class="reel-card reel-card--side">
-                    <img src="./assets/images/icons/play-circle.svg" alt="" aria-hidden="true">
-                    <span>Case study video placeholder</span>
-                  </div>
-                </div>
-              </article>
-
-              <article class="td-carousel__slide" data-carousel-slide>
-                <div class="reel-deck">
-                  <div class="reel-card reel-card--side">
-                    <img src="./assets/images/icons/play-circle.svg" alt="" aria-hidden="true">
-                    <span>Instagram reel slot</span>
-                  </div>
-                  <div class="reel-card reel-card--active">
-                    <img src="./assets/images/icons/play-circle.svg" alt="" aria-hidden="true">
+                </article>
+                <article class="splide__slide">
+                  <div class="reel-card">
+                    <span data-lucide="play-circle" aria-hidden="true"></span>
                     <span>Client story embed placeholder</span>
                     <p>Real client media requires permission before publishing.</p>
                   </div>
-                  <div class="reel-card reel-card--side">
-                    <img src="./assets/images/icons/play-circle.svg" alt="" aria-hidden="true">
-                    <span>Case study video placeholder</span>
-                  </div>
-                </div>
-              </article>
-
-              <article class="td-carousel__slide" data-carousel-slide>
-                <div class="reel-deck">
-                  <div class="reel-card reel-card--side">
-                    <img src="./assets/images/icons/play-circle.svg" alt="" aria-hidden="true">
-                    <span>Instagram reel slot</span>
-                  </div>
-                  <div class="reel-card reel-card--active">
-                    <img src="./assets/images/icons/play-circle.svg" alt="" aria-hidden="true">
+                </article>
+                <article class="splide__slide">
+                  <div class="reel-card">
+                    <span data-lucide="play-circle" aria-hidden="true"></span>
                     <span>Case study video placeholder</span>
                     <p>Outcome details stay empty until reviewed and approved.</p>
                   </div>
-                  <div class="reel-card reel-card--side">
-                    <img src="./assets/images/icons/play-circle.svg" alt="" aria-hidden="true">
-                    <span>Client story embed placeholder</span>
+                </article>
+                <article class="splide__slide">
+                  <div class="reel-card">
+                    <span data-lucide="play-circle" aria-hidden="true"></span>
+                    <span>Instagram reel slot</span>
+                    <p>Future reels stay blank until the real embed is approved.</p>
                   </div>
-                </div>
-              </article>
+                </article>
+                <article class="splide__slide">
+                  <div class="reel-card">
+                    <span data-lucide="play-circle" aria-hidden="true"></span>
+                    <span>Client story embed placeholder</span>
+                    <p>No names, images, or results are shown without consent.</p>
+                  </div>
+                </article>
+                <article class="splide__slide">
+                  <div class="reel-card">
+                    <span data-lucide="play-circle" aria-hidden="true"></span>
+                    <span>Case study video placeholder</span>
+                    <p>Future case-study media stays unpublished until reviewed.</p>
+                  </div>
+                </article>
+                <article class="splide__slide">
+                  <div class="reel-card">
+                    <span data-lucide="play-circle" aria-hidden="true"></span>
+                    <span>Instagram reel slot</span>
+                    <p>Only approved public embeds should replace this slot.</p>
+                  </div>
+                </article>
+              </div>
             </div>
 
             <div class="td-carousel__controls reel-carousel-v2__controls" aria-label="Reel placeholder controls">
-              <button class="td-icon-button" type="button" data-carousel-prev aria-label="Previous reel placeholder">
-                <img src="./assets/images/icons/chevron-left.svg" alt="" aria-hidden="true">
+              <button class="td-icon-button" type="button" data-splide-prev aria-label="Previous reel placeholder">
+                <span data-lucide="chevron-left" aria-hidden="true"></span>
               </button>
-              <div class="td-carousel__dots" data-carousel-dots aria-label="Reel placeholder selector"></div>
-              <button class="td-icon-button" type="button" data-carousel-next aria-label="Next reel placeholder">
-                <img src="./assets/images/icons/chevron-right.svg" alt="" aria-hidden="true">
+              <div class="td-carousel__dots" data-splide-dots aria-label="Reel placeholder selector"></div>
+              <button class="td-icon-button" type="button" data-splide-next aria-label="Next reel placeholder">
+                <span data-lucide="chevron-right" aria-hidden="true"></span>
               </button>
             </div>
           </div>
@@ -569,44 +567,46 @@
           </div>
 
           <div class="review-layout">
-            <div class="td-carousel review-carousel-v2" data-carousel aria-label="Google review plugin placeholder carousel">
-              <div class="td-carousel__slides">
-                <article class="td-carousel__slide is-active review-placeholder-card" data-carousel-slide>
+            <aside class="review-proof-panel" data-aos="fade-left" aria-label="Future review proof panel">
+              <span data-lucide="badge-check" aria-hidden="true"></span>
+              <h3>Plugin-ready proof panel</h3>
+              <p>This area can later show plugin-supplied Google review details. It does not display sample ratings or fake proof.</p>
+              <div class="v2-ticket v2-ticket--lime review-ticket">Real Google data pending</div>
+            </aside>
+
+            <div class="splide td-splide review-carousel-v2" data-splide-carousel="reviews" data-aos="fade-right" aria-label="Google review plugin placeholder carousel">
+              <div class="splide__track">
+                <div class="splide__list">
+                <article class="splide__slide review-placeholder-card">
                   <p class="td-kicker">Google review plugin slot</p>
                   <h3>Real Google review feed will replace this card.</h3>
                   <p>No names, scores, counts, or quote text are included in the prototype.</p>
                 </article>
 
-                <article class="td-carousel__slide review-placeholder-card" data-carousel-slide>
+                <article class="splide__slide review-placeholder-card">
                   <p class="td-kicker">Review card placeholder</p>
                   <h3>Approved review content can render here later.</h3>
                   <p>The manual card stays intentionally empty of claims until plugin data is connected.</p>
                 </article>
 
-                <article class="td-carousel__slide review-placeholder-card" data-carousel-slide>
+                <article class="splide__slide review-placeholder-card">
                   <p class="td-kicker">Rating summary pending real Google data</p>
                   <h3>Future rating summary area</h3>
                   <p>Rating and review count will only appear after the verified Google source is available.</p>
                 </article>
+                </div>
               </div>
 
               <div class="td-carousel__controls" aria-label="Review placeholder controls">
-                <button class="td-icon-button" type="button" data-carousel-prev aria-label="Previous review placeholder">
-                  <img src="./assets/images/icons/chevron-left.svg" alt="" aria-hidden="true">
+                <button class="td-icon-button" type="button" data-splide-prev aria-label="Previous review placeholder">
+                  <span data-lucide="chevron-left" aria-hidden="true"></span>
                 </button>
-                <div class="td-carousel__dots" data-carousel-dots aria-label="Review placeholder selector"></div>
-                <button class="td-icon-button" type="button" data-carousel-next aria-label="Next review placeholder">
-                  <img src="./assets/images/icons/chevron-right.svg" alt="" aria-hidden="true">
+                <div class="td-carousel__dots" data-splide-dots aria-label="Review placeholder selector"></div>
+                <button class="td-icon-button" type="button" data-splide-next aria-label="Next review placeholder">
+                  <span data-lucide="chevron-right" aria-hidden="true"></span>
                 </button>
               </div>
             </div>
-
-            <aside class="review-proof-panel" aria-label="Future review proof panel">
-              <img src="./assets/images/icons/award.svg" alt="" aria-hidden="true">
-              <h3>Plugin-ready proof panel</h3>
-              <p>This area can later show plugin-supplied Google review details. It does not display sample ratings or fake proof.</p>
-              <div class="v2-ticket v2-ticket--lime review-ticket">Real Google data pending</div>
-            </aside>
           </div>
         </div>
       </section>
@@ -640,36 +640,36 @@
             <p>Practical answers before you decide whether to start with WhatsApp, Serampore, Khardaha, or online consultation.</p>
           </div>
 
-          <div class="faq-stack">
-            <details>
+          <div class="faq-stack" data-faq-group>
+            <details name="homepage-faq">
               <summary>How much does a nutrition consultation in Kolkata cost?</summary>
               <p>Consultation fees must be confirmed directly with Tulika before publishing. The first WhatsApp conversation can clarify the consultation scope, location, and next step without adding unverified pricing to the page.</p>
             </details>
-            <details>
+            <details name="homepage-faq">
               <summary>Do you offer online consultations outside Serampore and Khardaha?</summary>
               <p>Yes. In addition to in-person consultations at the Serampore and Khardaha chambers, Tulika offers online consultations via video call across India. Personalized meal plans and follow-up support can be delivered through WhatsApp and email.</p>
             </details>
-            <details>
+            <details name="homepage-faq">
               <summary>Can a nutritionist help with PCOS and thyroid-related weight gain?</summary>
               <p>PCOS/PCOD and thyroid management are core nutrition support areas. Tulika uses individualized diet plans that consider insulin resistance, hormonal balance, familiar Indian foods, and weekly adjustments based on each person's response.</p>
             </details>
-            <details>
+            <details name="homepage-faq">
               <summary>What is the difference between a nutritionist and a dietitian?</summary>
               <p>A dietitian typically holds a degree in dietetics and may be registered with a professional body. A nutritionist holds professional certifications in nutrition science. Tulika Dutta is a certified nutritionist and dietitian with diplomas in Nutrition and Dietetics from NFNA and IGMPI.</p>
             </details>
-            <details>
+            <details name="homepage-faq">
               <summary>What happens in a first nutrition consultation?</summary>
               <p>The first session reviews body measurements, health history, eating patterns, lifestyle, and goals. Based on this assessment, Tulika creates a personalized meal plan tailored to routine, food preferences, and follow-up needs.</p>
             </details>
-            <details>
+            <details name="homepage-faq">
               <summary>Do I need to cook separate meals for my family?</summary>
               <p>No. Meal plans are designed to be family-friendly where possible. Portion adjustments and simple swaps help familiar Bengali and Indian meals fit more naturally into daily home cooking.</p>
             </details>
-            <details>
+            <details name="homepage-faq">
               <summary>How quickly will I see results?</summary>
               <p>Results vary by condition, consistency, metabolism, and the plan being followed. Tulika tracks progress through follow-ups and adjusts the plan without promising a fixed timeline or certain outcome.</p>
             </details>
-            <details>
+            <details name="homepage-faq">
               <summary>Can vegetarians and vegans follow your programs?</summary>
               <p>Yes. Tulika can design vegetarian and vegan meal plans using plant-based protein sources such as lentils, legumes, soy, nuts, seeds, and other foods suited to the person's needs.</p>
             </details>
@@ -772,12 +772,12 @@
               </select>
             </div>
             <div class="td-form-field">
-              <label for="contact-message">Short note (optional, no detailed medical history)</label>
+              <label for="contact-message">Short note (optional, keep it general)</label>
               <textarea id="contact-message" name="message" rows="4"></textarea>
             </div>
-            <button class="td-button td-button--primary" type="submit">
+            <button class="td-button td-button--primary contact-submit-button" type="submit" aria-label="Book Your Free Consultation on WhatsApp">
               <img src="./assets/images/icons/message-circle.svg" alt="" aria-hidden="true">
-              <span>Book Your Free Consultation on WhatsApp</span>
+              <span>Book on WhatsApp</span>
             </button>
             <p class="td-form-status" data-form-status role="status" aria-live="polite">Your information is used only to prepare the WhatsApp message.</p>
           </form>
@@ -791,7 +791,13 @@
             <h2 id="newsletter-title">Nutrition notes can live here when content is ready.</h2>
             <p>A simple learning update can be added after a real content workflow is approved. No email is collected in this prototype.</p>
           </div>
-          <span class="newsletter-pending">Newsletter workflow pending</span>
+          <div class="newsletter-input-group" role="group" aria-label="Visual-only newsletter signup preview">
+            <input type="email" placeholder="Email address" aria-label="Email address placeholder" readonly>
+            <button type="button" aria-label="Subscribe to newsletter updates">
+              <span class="newsletter-button-text">Subscribe</span>
+              <span data-lucide="send" aria-hidden="true"></span>
+            </button>
+          </div>
         </div>
       </section>
     </main>
@@ -799,11 +805,11 @@
     <footer class="site-footer-v2" id="footer">
       <div class="td-container site-footer-v2__inner">
         <div class="site-footer-v2__brand">
-          <span class="td-brand__mark">TD</span>
-          <div>
+          <div class="site-footer-v2__brand-line">
+            <span class="td-brand__mark">TD</span>
             <strong>Tulika Dutta</strong>
-            <p>Certified Nutritionist &amp; Dietitian serving Kolkata, Serampore, Khardaha, and online clients across India.</p>
           </div>
+          <p>Certified Nutritionist &amp; Dietitian serving Kolkata, Serampore, Khardaha, and online clients across India.</p>
         </div>
 
         <div class="site-footer-v2__grid">
@@ -842,7 +848,21 @@
 
       <div class="site-footer-strip">
         <div class="td-container site-footer-strip__inner">
-          <p>Social profile links pending verification.</p>
+          <div class="site-footer-strip__social" aria-label="Social profile links pending verification">
+            <span>Social links pending verification</span>
+            <a href="#" aria-label="Facebook profile link pending verification">
+              <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+            </a>
+            <a href="#" aria-label="Instagram profile link pending verification">
+              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="#" aria-label="Twitter/X profile link pending verification">
+              <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="#" aria-label="YouTube channel link pending verification">
+              <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+            </a>
+          </div>
           <p>Last reviewed by Tulika Dutta, Certified Nutritionist &amp; Dietitian - July 2026</p>
           <p>2026 Tulika Dutta Nutrition. All rights reserved.</p>
         </div>

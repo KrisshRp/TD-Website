@@ -302,12 +302,34 @@
   background: rgba(255, 253, 247, 0.94);
   color: var(--color-ink);
   font: inherit;
+  transition: border-color 180ms ease-out, box-shadow 180ms ease-out, background-color 180ms ease-out;
 }
 
 .td-form-field input,
 .td-form-field select {
   min-height: 48px;
   padding: 0 14px;
+}
+
+.td-form-field select {
+  appearance: none;
+  padding-right: 46px;
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--color-teal-dark) 50%),
+    linear-gradient(135deg, var(--color-teal-dark) 50%, transparent 50%);
+  background-position:
+    calc(100% - 22px) 50%,
+    calc(100% - 16px) 50%;
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+}
+
+.td-form-field input:focus,
+.td-form-field select:focus,
+.td-form-field textarea:focus {
+  border-color: var(--color-teal);
+  box-shadow: 0 0 0 4px rgba(23, 107, 100, 0.12);
+  outline: 0;
 }
 
 .td-form-field textarea {
@@ -327,7 +349,10 @@
   .td-icon-button,
   .td-nav,
   .td-nav__menu,
-  .td-float-ticket {
+  .td-float-ticket,
+  .td-form-field input,
+  .td-form-field select,
+  .td-form-field textarea {
     animation: none;
     transition: none;
   }

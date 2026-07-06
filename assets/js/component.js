@@ -4,7 +4,12 @@
 
   const initIcons = () => {
     if (!window.lucide) return;
-    window.lucide.createIcons();
+    window.lucide.createIcons({
+      attrs: {
+        class: "td-lucide-icon",
+        "aria-hidden": "true"
+      }
+    });
   };
 
   const initMotion = () => {
@@ -149,6 +154,7 @@
     if (mode === "conditions") {
       return {
         ...shared,
+        autoplay: false,
         type: "slide",
         perPage: 3,
         perMove: 1,
@@ -158,6 +164,36 @@
           991: { perPage: 2 },
           640: { perPage: 1 }
         }
+      };
+    }
+
+    if (mode === "reels") {
+      return {
+        ...shared,
+        autoplay: false,
+        type: "loop",
+        focus: "center",
+        perPage: 5,
+        perMove: 1,
+        gap: "0px",
+        trimSpace: false,
+        breakpoints: {
+          1023: { perPage: 3 },
+          767: { perPage: 1, padding: "2rem" }
+        }
+      };
+    }
+
+    if (mode === "reviews") {
+      return {
+        ...shared,
+        autoplay: false,
+        type: "slide",
+        rewind: true,
+        perPage: 1,
+        perMove: 1,
+        autoHeight: true,
+        gap: "18px"
       };
     }
 
@@ -281,6 +317,20 @@
     next?.addEventListener("click", () => scrollByCard(1));
   };
 
+  const initFaqGroup = (group) => {
+    if (!group) return;
+
+    const items = Array.from(group.querySelectorAll("details"));
+    items.forEach((item) => {
+      item.addEventListener("toggle", () => {
+        if (!item.open) return;
+        items.forEach((sibling) => {
+          if (sibling !== item) sibling.open = false;
+        });
+      });
+    });
+  };
+
   const initContactForm = (form) => {
     if (!form) return;
 
@@ -321,6 +371,7 @@
     initSplideCarousel,
     initCounters,
     initScrollCarousel,
+    initFaqGroup,
     initContactForm
   };
 })();
