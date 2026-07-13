@@ -1,5 +1,5 @@
 .td-container {
-  width: min(1180px, calc(100% - 32px));
+  width: min(1500px, calc(100% - 32px));
   margin-inline: auto;
 }
 
@@ -366,7 +366,7 @@
 
 @media (max-width: 640px) {
   .td-container {
-    width: min(100% - 24px, 1180px);
+    width: min(100% - 24px, 1500px);
   }
 
   .td-button {
