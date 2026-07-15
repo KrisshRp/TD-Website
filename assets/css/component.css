@@ -1,4 +1,4 @@
-.td-container {
+﻿.td-container {
   width: min(1500px, calc(100% - 32px));
   margin-inline: auto;
 }

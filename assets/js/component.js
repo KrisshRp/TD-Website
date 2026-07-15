@@ -197,6 +197,22 @@
       };
     }
 
+    if (mode === "certificates") {
+      return {
+        ...shared,
+        autoplay: false,
+        type: "slide",
+        rewind: true,
+        perPage: 3,
+        perMove: 1,
+        gap: "18px",
+        breakpoints: {
+          991: { perPage: 2 },
+          640: { perPage: 1 }
+        }
+      };
+    }
+
     return {
       ...shared,
       type: "fade",
@@ -255,8 +271,25 @@
     splide.mount();
   };
 
+  const initCertificatePreview = (dialog) => {
+    if (!dialog || !("showModal" in dialog)) return;
+
+    const title = dialog.querySelector("#certificate-dialog-title");
+    const meta = dialog.querySelector("[data-certificate-dialog-meta]");
+    const note = dialog.querySelector("[data-certificate-dialog-note]");
+
+    document.querySelectorAll("[data-certificate-preview]").forEach((trigger) => {
+      trigger.addEventListener("click", () => {
+        if (title) title.textContent = trigger.dataset.certificateTitle || "Credential preview";
+        if (meta) meta.textContent = trigger.dataset.certificateMeta || "Approved image not supplied yet.";
+        if (note) note.textContent = trigger.dataset.certificateNote || "This preview is a truthful placeholder, not an issued certificate image.";
+        dialog.showModal();
+      });
+    });
+  };
+
   const setCount = (element, value) => {
-    element.textContent = `${value}${element.dataset.suffix || ""}`;
+    element.textContent = `${value.toLocaleString("en-IN")}${element.dataset.suffix || ""}`;
   };
 
   const animateCount = (element) => {
@@ -369,6 +402,7 @@
     initNav,
     initCarousel,
     initSplideCarousel,
+    initCertificatePreview,
     initCounters,
     initScrollCarousel,
     initFaqGroup,

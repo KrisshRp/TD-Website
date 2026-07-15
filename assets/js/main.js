@@ -8,6 +8,7 @@
   components.initMotion();
   components.initNav(document.querySelector("[data-nav]"));
   document.querySelectorAll("[data-splide-carousel]").forEach(components.initSplideCarousel);
+  components.initCertificatePreview(document.querySelector("[data-certificate-dialog]"));
   document.querySelectorAll("[data-carousel]").forEach(components.initCarousel);
   document.querySelectorAll("[data-scroll-carousel]").forEach(components.initScrollCarousel);
   document.querySelectorAll("[data-faq-group]").forEach(components.initFaqGroup);
