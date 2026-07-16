@@ -86,7 +86,10 @@
 .service-specialised__controls .td-carousel__dots {
   pointer-events: auto;
 }
-
+.service-specialised__controls .td-carousel__dots,
+.service-core__controls .td-carousel__dots{
+  display: none;
+}
 .service-core__soft-cta {
   margin: 30px 0 0;
   text-align: center;
