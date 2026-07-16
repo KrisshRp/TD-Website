@@ -280,7 +280,7 @@
   width: min(58%, 270px);
   aspect-ratio: 0.78;
   position: absolute;
-  top: 54px;
+  top: 30px;
   left: 50%;
   transform: translateX(-50%);
   border: 1px solid rgba(23, 107, 100, 0.34);
@@ -1492,8 +1492,13 @@
 .site-footer-v2 a {
   color: rgba(255, 255, 255, 0.86);
   text-decoration: none;
+  display: flex;
+  align-items: center;
 }
-
+.site-footer-v2 a svg,
+.site-footer-v2 a i{
+  margin-right: 10px;
+}
 .site-footer-v2 a:hover,
 .site-footer-v2 a:focus-visible {
   color: var(--color-lime);
@@ -1540,6 +1545,10 @@
   color: rgba(255, 255, 255, 0.86);
   text-decoration: none;
   transition: background-color 180ms ease-out, border-color 180ms ease-out, color 180ms ease-out, transform 180ms ease-out;
+}
+
+.site-footer-strip__social a i{
+  margin: unset;
 }
 
 .site-footer-strip__social a:hover,
