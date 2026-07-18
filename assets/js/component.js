@@ -364,6 +364,54 @@
     });
   };
 
+  const initTabs = (tabsRoot) => {
+    if (!tabsRoot) return;
+
+    const tabs = Array.from(tabsRoot.querySelectorAll("[role='tab']"));
+    const panels = Array.from(tabsRoot.querySelectorAll("[role='tabpanel']"));
+    if (!tabs.length || !panels.length) return;
+
+    const setActive = (nextTab) => {
+      tabs.forEach((tab) => {
+        const isActive = tab === nextTab;
+        const panel = document.getElementById(tab.getAttribute("aria-controls"));
+        tab.classList.toggle("is-active", isActive);
+        tab.setAttribute("aria-selected", String(isActive));
+        tab.tabIndex = isActive ? 0 : -1;
+        if (panel) {
+          panel.hidden = !isActive;
+          panel.classList.toggle("is-active", isActive);
+        }
+      });
+    };
+
+    tabs.forEach((tab, index) => {
+      tab.addEventListener("click", () => setActive(tab));
+      tab.addEventListener("keydown", (event) => {
+        const direction = event.key === "ArrowRight" ? 1 : event.key === "ArrowLeft" ? -1 : 0;
+        if (!direction) return;
+        event.preventDefault();
+        const next = tabs[(index + direction + tabs.length) % tabs.length];
+        setActive(next);
+        next.focus();
+      });
+    });
+  };
+
+  const initOneOpen = (root) => {
+    if (!root) return;
+
+    const items = Array.from(root.querySelectorAll("details"));
+    items.forEach((item) => {
+      item.addEventListener("toggle", () => {
+        if (!item.open) return;
+        items.forEach((sibling) => {
+          if (sibling !== item) sibling.open = false;
+        });
+      });
+    });
+  };
+
   const initContactForm = (form) => {
     if (!form) return;
 
@@ -406,6 +454,8 @@
     initCounters,
     initScrollCarousel,
     initFaqGroup,
+    initTabs,
+    initOneOpen,
     initContactForm
   };
 })();
